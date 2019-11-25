@@ -6,6 +6,12 @@ public class StringToObject {
     public function StringToObject() {
     }
 
+    /**
+     * 测试用例：{"test0":[{"id":0,"num":1},{"id":5,"num":10}],"test1":[{"id":10,"num":100},{"id":50,"num":30}]}
+     * var temp:Object = StringToObject.parseObject(TextField(this.getChildByName("input")).text);
+     * TextField(this.getChildByName("output")).text = temp["test1"][0].id + ", " + temp["test1"][0].num;
+     */
+
     public static function parseObject(str:String):Object {
         if (str.charAt(0)=="[" && str.charAt(str.length-1)=="]") {
             return getArray(str);
